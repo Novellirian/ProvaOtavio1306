@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verificação de Senha</title>
+</head>
+<body>
+  <input type="password" id="senhaInput" placeholder="Digite a senha">
+  //Pode colocar tanto o input type como "text" como "password"
+  <button onclick="verificarSenha()">Verificar</button>
+
+  <script>
+    function verificarSenha() {
+      var senha = document.getElementById("senhaInput").value;
+
+
+      if (senha.length < 8) {
+        alert("A senha deve possuir pelo menos 8 caracteres.");
+        return;
+      }
+
+
+      if (!/[A-Z]/.test(senha)) {
+        alert("A senha deve possuir pelo menos uma letra maiúscula.");
+        return;
+      }
+
+
+
+      if (!/[0-9]/.test(senha)) {
+        alert("A senha deve possuir pelo menos um número.");
+        return;
+      }
+
+
+      // Se tudo está certo a senha é valida 
+      alert("Senha válida.");
+    }
+  </script>
+</body>
+</html>
