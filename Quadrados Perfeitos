@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Quadrado Perfeito</title>
+  <script>
+    function QuadradoPerfeito() {
+      var numero = parseInt(document.getElementById("numero").value);
+      var raiz = 0;
+      var quadrado = 0;
+
+      for (var i = 1; i <= numero; i++) {
+        quadrado = i * i;
+        if (quadrado == numero) {
+          alert(numero + " é um quadrado perfeito!");
+          return;
+        } else if (quadrado > numero) {
+          break;
+        }
+      }
+
+      alert(numero + " não é um quadrado perfeito.");
+    }
+  </script>
+</head>
+<body>
+  <label for="numero">Digite um número:</label>
+  <input type="number" id="numero">
+  <button onclick="QuadradoPerfeito()">Verificar</button>
+</body>
+</html>
