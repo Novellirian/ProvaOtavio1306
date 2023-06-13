@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Fatorial</title>
+</head>
+<body>
+  <input type="number" id="numero" placeholder="Insira um número">
+  <button onclick="calcularFatorial()">Calcular o Fatorial</button>
+  <script>
+    function calcularFatorial() {
+      var numero = parseInt(document.getElementById("numero").value);
+      var fatorial = calcularFatorialNumero(numero);
+      alert("O fatorial de " + numero + " é: " + fatorial);
+    }
+
+    function calcularFatorialNumero(valor) {
+      if (valor === 0 || valor === 1) {
+        return 1;
+      } else {
+        return valor * calcularFatorialNumero(valor - 1);
+      }
+    }
+  </script>
+</body>
+</html>
