@@ -4,13 +4,15 @@
   <title>Calculadora de Fatorial</title>
 </head>
 <body>
-  <input type="number" id="numero" placeholder="Insira um número">
-  <button onclick="calcularFatorial()">Calcular o Fatorial</button>
+  <button onclick="descreverFatoriais()">Descrever fatoriais</button>
   <script>
-    function calcularFatorial() {
-      var numero = parseInt(document.getElementById("numero").value);
-      var fatorial = calcularFatorialNumero(numero);
-      alert("O fatorial de " + numero + " é: " + fatorial);
+    function descreverFatoriais() {
+      var mensagem = "";
+      for (var i = 1; i <= 10; i++) {
+        var fatorial = calcularFatorialNumero(i);
+        mensagem += "O fatorial de " + i + " é: " + fatorial + "\n";
+      }
+      alert(mensagem);
     }
 
     function calcularFatorialNumero(valor) {
