@@ -4,8 +4,7 @@
   <title>Verificação de Senha</title>
 </head>
 <body>
-  <input type="password" id="senhaInput" placeholder="Digite a senha">
-  //Pode colocar tanto o input type como "text" como "password"
+  <input type="text" id="senhaInput" placeholder="Digite a senha">
   <button onclick="verificarSenha()">Verificar</button>
 
   <script>
@@ -24,6 +23,11 @@
         return;
       }
 
+
+      if (!/[a-z]/.test(senha)) {
+  alert("A senha deve possuir pelo menos uma letra minúscula.");
+  return;
+}
 
 
       if (!/[0-9]/.test(senha)) {
