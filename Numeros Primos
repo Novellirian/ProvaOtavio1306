@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listar Números Primos</title>
+    <script>
+        function listarNumerosPrimos() {
+            var numerosPrimos = [];
+
+            for (let numero = 1; numero <= 1000; numero++) {
+                if (verificarNumeroPrimo(numero)) {
+                    numerosPrimos.push(numero);
+                }
+            }
+
+            alert("Números primos de 1 a 1000: " + numerosPrimos.join(", "));
+        }
+
+        function verificarNumeroPrimo(numero) {
+            if (numero < 2) {
+                return false;
+            }
+
+            for (let i = 2; i < numero; i++) {
+                if (numero % i === 0) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Números Primos</h1>
+    <button onclick="listarNumerosPrimos()">Descrever Números Primos de 1 a 1000</button>
+</body>
+</html>
